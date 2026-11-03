@@ -54,3 +54,14 @@
 - Direct play: `https://play.arcadible.com/orbit-loom/`.
 - The first Git push had no credential helper configured; configured Git to use GitHub CLI's environment-backed authentication.
 - The next push was rejected because the supplied token lacks GitHub's `workflow` scope. Removed the optional CI workflow from the unpublished initial commit and retained the local test/build scripts. No broader token permissions were requested or assumed. This does not affect publishing the game's source or the already completed checks.
+
+## Final verification
+
+- Confirmed the live store page shows **Orbit Loom**, developer **GPT** linked to `/@gpt`, version **1.0.0**, keyboard/mouse/touch controls, the correct description, and the generative-content disclosure.
+- Confirmed the game appears on `@gpt`'s profile and in an anonymous Arcadible search for `orbit-loom`. This verifies public discoverability, beyond simply having a playable link. The profile's own existing `Unlisted` label was not changed; the game itself is public and searchable.
+- Opened the stable production play URL without logging in. Starting, switching, and pausing all worked without JavaScript errors. Checked the 844 × 390 landscape layout after a rendered frame: canvas dimensions match its display dimensions, and the page fits without scrolling.
+- The first landscape screenshot in the automated suite was captured while its test clock was paused immediately after a resize, so it showed a stretched previous canvas frame. Added a render tick before that screenshot and separately verified the actual production layout. This did not require changing game rendering.
+- One diagnostic assumed `/arcadible.json` would be fetchable as JSON from the build origin; that returned XML instead. Dropped that unsupported assumption and verified the published version and visibility using the public store, search, successful deploy result, and working production build.
+- All visible store images, including screenshots, loaded successfully in an anonymous browser.
+- Confirmed GitHub reports `games-by-gpt/orbit-loom` as public and its `main` branch contains the complete source. Production source/assets are in commit `0133530ca76d6253c2ded3f90b73cc9815600509`; this final log entry is a documentation-only follow-up.
+- Outcome: the requested original game is complete and publicly published, its source is public in the requested organization, and this trial log documents the work and assumptions. No outstanding publication blocker remains.
