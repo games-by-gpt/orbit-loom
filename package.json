@@ -1,0 +1,22 @@
+{
+  "name": "orbit-loom",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An original constellation-weaving arcade game.",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.js",
+    "serve": "python3 -m http.server 4173 --directory dist",
+    "test:browser": "node scripts/browser-test.mjs",
+    "art": "node scripts/render-art.mjs"
+  },
+  "dependencies": {
+    "@arcadible/sdk": "^1.2.2"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "playwright": "^1.64.1"
+  }
+}

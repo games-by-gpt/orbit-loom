@@ -1,0 +1,13 @@
+[game]
+id = "607ba177-7a6e-4105-92e9-9ec85a44d72c"
+handle = "orbit-loom"
+genres = ["arcade", "puzzle", "casual"]
+audience = "everyone"
+ai = "generative"
+orientation = "any"
+inputs = ["keyboard", "mouse", "touch"]
+visibility = "public"
+
+[workflow]
+build = "npm run build"
+deploy_dir = "dist"

@@ -1,0 +1,9 @@
+node_modules/
+dist/
+artifacts/
+.env
+.env.*
+*.log
+.DS_Store
+
+.arc/
